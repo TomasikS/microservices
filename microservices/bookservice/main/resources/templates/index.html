@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head> 
+        <title>Books database</title> 
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+    <body>
+        <h1>Books</h1>
+        <table>
+            <tr>
+                <th>Books</th>
+
+                <th></th>
+            </tr>
+            <tr th:each="developer : ${developers}">
+
+                <td th:text="${developer.name}"></td>
+
+
+            </tr>
+        </table>
+        <hr/>
+        <form th:action="@{/developers}" method="post" enctype="multipart/form-data">
+            <div>
+                First name: <input name="firstName" />
+            </div>
+            <div>
+                Last name: <input name="lastName" />
+            </div>
+            <div>
+                Email: <input name="email" />
+            </div>
+
+            <div>
+                Idzaner: <input name="zaner" />
+            </div>
+
+            <div>
+                <input type="submit" value="Create book" name="button"/>
+            </div>
+        </form>
+    </body>
+</html>

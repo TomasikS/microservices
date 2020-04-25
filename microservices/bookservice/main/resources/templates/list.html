@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<h2>Person List</h2>
+<table class="glyphicon glyphicon-calendar">
+<tr>
+<th>Id</th>
+<th>Name</th>
+<th>Age</th>
+</tr>
+<tr th:each="person : ${developers}">
+<td th:text="${person.id}"></td>
+<td th:text="${person.name}"></td>
+</tr>
+</table>
+</body>
+
